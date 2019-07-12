@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS test</title>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div>Phone-Book</div><br>
+
+
+	<input type="button" onclick="getFileUrl('bd.txt')" name="download" value="Download">
+	<input type="button" onclick="EditBook()" name="edit" value="EditBook"><br><br>
+
+	<div id="editButtons">
+		<input type="button" onclick="Add()"	name="add" value="Add">
+		<input type="button" onclick="Remove()"	name="remove" value="Remove">
+		<input type="button" onclick="EditList()"	name="editList" value="Edit by List">
+		<form action="" method="post"  name="UpdateForm" id="updateListForm"><br>
+			<input name="myFile" type="file" id="inputFile">
+			<input type="button" onclick="UpdateByList()"	name="updateByList" value="Update">
+			<br>
+		</form>
+
+		<form action="" method="post"  name="removeForm" id="RemoveForm"><br>
+			<input type="text" name="phone" placeholder="10 digits" id="RemovePhone">
+			<input type="button" onclick="RemoveRecord()"	name="editRecord" value="Remove Record">
+			<input type="button" onclick="StopAdd()"	name="Stop" value="Stop"> <br><br>
+		</form>
+
+	</div>
+	<form action="" method="post" name="form" id="addForm">
+		<label for="phone">Phone: </label>
+		<input type="text" name="phone" placeholder="10 digits" id="phone">
+		<label for="name">Name: </label>
+		<input type="text" name="name" placeholder="Name" id="name">
+		<input type="button" onclick="okAddNew()" name="okAdd" value="Add">
+
+	</form>
+	<form action="" method="post"  name="weHave" id="weHave"><br><br>
+		We have record in the database with this phone. Edit?<br><br>
+		<input type="button" onclick="EditRecord()"	name="editRecord" value="Edit Record">
+		<input type="button" onclick="StopAdd()"	name="Stop" value="Stop"> <br><br>
+	</form>
+</body>
+</html>
